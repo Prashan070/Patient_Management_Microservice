@@ -1,5 +1,11 @@
 package com.pm.patientservice.DTO;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(
+        name = "Patient Respnse",
+       description = "It hold response of patient"
+)
 public class PatientResponseDTO {
 
     private String id;

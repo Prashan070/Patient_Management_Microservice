@@ -1,16 +1,18 @@
 package com.pm.patientservice.DTO;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import org.hibernate.validator.constraints.Length;
 
-import java.time.LocalDate;
-
+@Schema(
+        name = "Patient",
+        description = "It hold Patient information"
+)
 public class PatientRequestDTO {
 
-    @NotBlank(message = "Name Required")
+    @NotBlank(message = "Name is Required")
     @Size(max = 100, message = "Name cannot exceed 100 character")
     private String patientName;
 
